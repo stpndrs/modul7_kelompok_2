@@ -1,0 +1,32 @@
+﻿{
+  "members": [
+    {
+      "firstName": "Stevan",
+      "lastName": "Andreas",
+      "gender": "male",
+      "age": 20,
+      "nim": "103082430002"
+    },
+    {
+      "firstName": "Rakha",
+      "lastName": "Bram",
+      "gender": "male",
+      "age": 21,
+      "nim": "103082400010"
+    },
+    {
+      "firstName": "Muh",
+      "lastName": "Fadhil",
+      "gender": "Male",
+      "age": 21,
+      "nim": "103082400012"
+    },
+    {
+      "firstName": "Muhammad",
+      "lastName": "Rizky",
+      "gender": "male",
+      "age": 21,
+      "nim": "103082400014"
+    }
+  ]
+}

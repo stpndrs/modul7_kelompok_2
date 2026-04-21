@@ -6,5 +6,8 @@ class Program
     {
         DataMahasiswa103082430002 dm = new DataMahasiswa103082430002();
         dm.ReadJSON();
+        Console.WriteLine();
+        TeamMembers103082430002 tm = new TeamMembers103082430002();
+        tm.ReadJSON();
     }
 }
