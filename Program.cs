@@ -2,7 +2,7 @@
 {
     static void Main(string[] args)
     {
-        DataMahasiswa103082400014 data = new DataMahasiswa103082400014();
+        TeamMembers103082400014 data = new TeamMembers103082400014();
         data.ReadJSON();
     }
 }
