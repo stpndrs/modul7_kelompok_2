@@ -1,0 +1,25 @@
+{
+  "members" : [
+    {
+       "firstName": "rakha",
+       "lastName": "bram",
+       "gender": "male",
+       "age": 99,
+       "nim": "1030824000010"
+    },
+    {
+       "firstName": "fadhil",
+       "lastName": "ahnaf",
+       "gender": "male",
+       "age": 99,
+       "nim": "103082400014"
+    },
+    {
+       "firstName": "stev",
+       "lastName": "andreas",
+       "gender": "male",
+       "age": 99,
+       "nim": "103082430002"
+    }
+  ]
+}

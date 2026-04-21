@@ -1,0 +1,15 @@
+{
+   "firstName": "Rizky",
+   "lastName": "Ramadhan",
+   "gender": "male",
+   "age": 99,
+   "address": {
+       "streetAddress": "ketintang",
+       "city": "Surabaya",
+       "state": "East Java"
+   },
+   "courses": [
+       { "code": "CRI2C4", "name": "Konstruksi Perangkat Lunak" },
+       { "code": "CRI2XX", "name": "Nama Mata Kuliah" }
+   ]
+}
