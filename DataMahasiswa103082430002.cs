@@ -5,7 +5,6 @@ using System.Collections.Generic;
 
 namespace modul7_kelompok_2
 {
-    // Class utama untuk menampung data JSON
     internal class DataMahasiswa103082430002
     {
         public string firstName { get; set; }
@@ -17,8 +16,9 @@ namespace modul7_kelompok_2
 
         public void ReadJSON()
         {
+            // membaca file json
             string jsonString = File.ReadAllText("jurnal7_1_103082430002.json");
-
+            // deserialisasi file json
             DataMahasiswa103082430002 data = JsonSerializer.Deserialize<DataMahasiswa103082430002>(jsonString);
 
             Console.WriteLine($"Nama Lengkap: {data.firstName} {data.lastName}");
@@ -34,6 +34,7 @@ namespace modul7_kelompok_2
         }
     }
 
+    // inisialisasi kelas kelas untuk menampung data json
     internal class Alamat
     {
         public string streetAddress { get; set; }

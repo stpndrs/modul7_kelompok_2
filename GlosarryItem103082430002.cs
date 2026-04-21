@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace modul7_kelompok_2
 {
+    // implementasi kelas kelas sebagai tempat penampung data dari json
     internal class GlossaryWrapper
     {
         public GlossaryData glossary { get; set; }
@@ -47,11 +48,12 @@ namespace modul7_kelompok_2
     internal class GlossaryItem103082430002
     {
         public void ReadJSON()
-        {
+        {            
+            // membaca file json
             string jsonString = File.ReadAllText("jurnal7_3_103082430002.json");
-
+            // deserialisasi file json
             GlossaryWrapper data = JsonSerializer.Deserialize<GlossaryWrapper>(jsonString);
-
+            // ambil data
             GlossEntry entry = data.glossary.GlossDiv.GlossList.GlossEntry;
 
             Console.WriteLine("=== DETAIL GLOSS ENTRY ===");
