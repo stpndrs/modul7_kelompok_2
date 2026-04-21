@@ -25,8 +25,12 @@ public class TeamMembers103082400014
         {
             for (int i = 0; i < data.members.Count; i++)
             {
-                var m = data.members[i];
-                Console.WriteLine($"{m.nim} {m.firstName} {m.lastName} ({m.age} {m.gender})");
+                Console.WriteLine(
+                    data.members[i].nim + " " +
+                    data.members[i].firstName + " " +
+                    data.members[i].lastName +
+                    " (" + data.members[i].age + " " + data.members[i].gender + ")"
+                );
             }
         }
     }
