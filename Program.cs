@@ -9,5 +9,8 @@ class Program
         Console.WriteLine();
         TeamMembers103082430002 tm = new TeamMembers103082430002();
         tm.ReadJSON();
+        Console.WriteLine();
+        GlossaryItem103082430002 gi = new GlossaryItem103082430002();
+        gi.ReadJSON();
     }
 }
