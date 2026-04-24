@@ -1,0 +1,68 @@
+﻿using System;
+using System.IO;
+using System.Text.Json;
+using System.Collections.Generic;
+
+namespace modul7_kelompok_2
+{
+    public class GlossaryWrapper
+    {
+        public GlossaryData glossary { get; set; }
+    }
+
+    internal class GlossaryData
+    {
+        public string title { get; set; }
+        public GlossDiv GlossDiv { get; set; }
+    }
+
+    internal class GlossDiv
+    {
+        public string title { get; set; }
+        public GlossList GlossList { get; set; }
+    }
+
+    internal class GlossList
+    {
+        public GlossEntry GlossEntry { get; set; }
+    }
+
+    internal class GlossEntry
+    {
+        public string ID { get; set; }
+        public string SortAs { get; set; }
+        public string GlossTerm { get; set; }
+        public string Acronym { get; set; }
+        public string Abbrev { get; set; }
+        public GlossDef GlossDef { get; set; }
+        public string GlossSee { get; set; }
+    }
+
+    internal class GlossDef
+    {
+        public string para { get; set; }
+        public List<string> GlossSeeAlso { get; set; }
+    }
+
+    public class GlossaryItem103082400012
+    {
+        public void ReadJSON()
+        {
+            string jsonString = File.ReadAllText("jurnal7_3_103082400012.json");
+
+            GlossaryWrapper data = JsonSerializer.Deserialize<GlossaryWrapper>(jsonString);
+
+            GlossEntry entry = data.glossary.GlossDiv.GlossList.GlossEntry;
+
+            Console.WriteLine("=== DETAIL GLOSS ENTRY ===");
+            Console.WriteLine($"ID        : {entry.ID}");
+            Console.WriteLine($"Term      : {entry.GlossTerm}");
+            Console.WriteLine($"Acronym   : {entry.Acronym}");
+            Console.WriteLine($"Abbrev    : {entry.Abbrev}");
+            Console.WriteLine($"Definition: {entry.GlossDef.para}");
+            Console.WriteLine($"See Also  : {string.Join(", ", entry.GlossDef.GlossSeeAlso)}");
+            Console.WriteLine($"See       : {entry.GlossSee}");
+            Console.WriteLine("==========================");
+        }
+    }
+}
